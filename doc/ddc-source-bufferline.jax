@@ -1,0 +1,30 @@
+*ddc-source-bufferline.txt* 指定したバッファの行を集めるddcソース
+
+作った人  : kuuote
+ライセンス: NYSL <http://www.kmonos.net/nysl/>
+
+ユーザーが指定したバッファの行を収集する |ddc| のソースです
+その場で補完候補を組み立てたい時に便利だと思います
+
+☆使い方
+
+`bufferline` をソース指定します
+
+>
+  call ddc#custom#patch_global('sources', ['bufferline'])
+<
+
+使いたいバッファの上で関数を実行します
+
+>
+  call ddc#source#bufferline#use()
+<
+
+必要なくなったら解放もできます
+
+>
+  call ddc#source#bufferline#release() " 実行したバッファ
+  call ddc#source#bufferline#release() " 全てのバッファ
+<
+
+ vim: ft=help
